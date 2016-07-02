@@ -89,8 +89,6 @@ fi
 
 status "Downloading and installing nginx"
 nginx_url=${NGINX_URL:-https://s3.amazonaws.com/devmynd-github/heroku-nginx-1.6.0.tar.gz}
-echo "nginx_url"
-echo $nginx_url
 curl $nginx_url -s -o - | tar xzf - -C $build_dir/vendor
 
 status "Adding boot script"
